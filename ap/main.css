@@ -1,0 +1,186 @@
+/* COLOR GUIDE
+ * HIGHLIGHT #E91E63
+ * LINK      #1E88E5;
+ * TITLE     #1A237E;
+ */
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+  background:  white;
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  color: black;
+}
+a {
+  color:  #1E88E5;
+}
+nav, h1, h2, h3, h4,
+.return, .highlight {
+  font-family:  "Montserrat", sans-serif;
+}
+
+h1, h2, h3, h4 {
+  color: #1A237E;
+}
+h1 {
+  letter-spacing: -0.5px;
+}
+h1 sup {
+  font-size: 0.4em;
+  line-height: 1.5;
+  vertical-align: top;
+}
+h1 span, .highlight {
+  display: block;
+  font-size: 0.5em;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: #E91E63;
+}
+.highlight {
+  letter-spacing: 0;
+  font-size: 1em;
+}
+.small {
+  font-size: 0.67em;
+  font-weight: 400;
+}
+.highlight.inline {
+  font-weight: 400;
+  display: inline;
+  text-transform: none;
+}
+h2, h3 {
+  margin-top: 1em;
+  margin-bottom: 0;
+}
+a[id] ~ p, h3 ~ p {
+  margin-top: 0.5em;
+}
+.return a {
+  text-decoration: none;
+  font-size: 0.8em;
+}
+.return a::before {
+  content: '\276E';
+  padding-right: 4px;
+  font-size: 0.9em;
+  display: inline-block;
+  transform: translate(0);
+  transition: 0.3s ease;
+}
+.return a:hover::before {
+  transform: translate(-2px);
+}
+
+#sectionLeft {
+  position: fixed;
+  width: 30%;
+  top: 0;
+  height: 100%;
+  text-align: right;
+  background: rgba(0,0,0,0.05);
+  margin: 0;
+  border-right: 2px solid #E91E63;
+  padding: 1em;
+  overflow: auto;
+  cursor: default;
+}
+#sectionLeft p {
+  max-width: 270px;
+  float: right;
+  padding: 0.5em 0;
+  margin-top: 0;
+  border-top: 1px dotted rgba(0,0,0,0.25);
+}
+nav {
+  text-transform: uppercase;
+  font-weight: 400;
+  line-height: 2.5;
+  margin: 1em -1em;
+  padding: 0;
+}
+nav a {
+  display: block;
+  text-decoration: none;
+}
+nav ul {
+  margin: 0;
+  padding: 0;
+}
+nav li {
+  list-style: none;
+  padding: 0 1em;
+}
+nav .active {
+  background: #E91E63;
+  color: white;
+  font-weight: 700;
+}
+.sub a {
+  text-transform: none;
+  background: #E91E63;
+  line-height: 1.5;
+  padding: 0.4em 1em;
+  color: white;
+  text-decoration: underline;
+  font-size: 0.8em;
+}
+.sub a:last-child {
+  padding-bottom: 1em;
+}
+
+#container {
+  padding-left: calc(30% + 1em);
+  padding-right: 1em;
+  max-width: calc(30% + 720px);
+  padding-bottom: 2em;
+}
+#container > p {
+  line-height: 1.4;
+}
+table {
+  border-collapse: collapse;
+  min-width: 100%;
+}
+td, th {
+  padding: 4px;
+  border-bottom: 1px solid black;
+  border-right: 1px dotted black;
+}
+td:last-child, th:last-child {
+  border-right: none;
+}
+.schedule {
+  table-layout: fixed;
+  width: 100%;
+}
+.schedule thead td {
+  width: 2em;
+}
+.schedule thead th {
+  width: calc(50% - 2em);
+}
+.schedule th:first-child {
+  height: 2em;
+}
+.schedule td, .schedule th {
+  text-align: center;
+}
+.schedule .-prep {
+  background: #eee;
+  color:  #444;
+  font-style: italic;
+}
+.schedule .-ap {
+  background-color: #BBDEFB;
+  font-weight: 700;
+  color: black;
+}
+.schedule.-includes-double-block .-ap {
+  background-color: #f8bbd0;
+}
