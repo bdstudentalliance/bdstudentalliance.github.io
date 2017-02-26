@@ -17,6 +17,9 @@ body {
 a {
   color:  #1E88E5;
 }
+a[onclick] {
+  cursor: pointer;
+}
 nav, h1, h2, h3, h4,
 .return, .highlight {
   font-family:  "Montserrat", sans-serif;
