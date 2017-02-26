@@ -146,14 +146,12 @@ nav .active {
 table {
   border-collapse: collapse;
   min-width: 100%;
+  border: 1px solid black;
 }
 td, th {
   padding: 4px;
-  border-bottom: 1px solid black;
-  border-right: 1px dotted black;
-}
-td:last-child, th:last-child {
-  border-right: none;
+  border: 1px solid black;
+  border-style: solid dotted;
 }
 .schedule {
   table-layout: fixed;
@@ -179,8 +177,10 @@ td:last-child, th:last-child {
 .schedule .-ap {
   background-color: #BBDEFB;
   font-weight: 700;
-  color: black;
+  border-radius: 3px;
+  border: 1px solid #1E88E5;
 }
 .schedule.-includes-double-block .-ap {
-  background-color: #f8bbd0;
+  background-color: #F8BBD0;
+  border: 1px solid #E91E63;
 }
