@@ -4,6 +4,7 @@
  * TITLE     #1A237E;
  */
 
+/* general styles */
 *, *::before, *::after {
     box-sizing: border-box;
 }
@@ -24,7 +25,6 @@ nav, h1, h2, h3, h4,
 .return, .highlight {
   font-family:  "Montserrat", sans-serif;
 }
-
 h1, h2, h3, h4 {
   color: #1A237E;
 }
@@ -64,6 +64,8 @@ h2, h3 {
 a[id] ~ p, h3 ~ p {
   margin-top: 0.5em;
 }
+
+/* bdsa link */
 .return a {
   text-decoration: none;
   font-size: 0.8em;
@@ -80,6 +82,7 @@ a[id] ~ p, h3 ~ p {
   transform: translate(-2px);
 }
 
+/* layout and nav styles */
 #sectionLeft {
   position: fixed;
   width: 30%;
@@ -88,13 +91,14 @@ a[id] ~ p, h3 ~ p {
   text-align: right;
   background: rgba(0,0,0,0.05);
   margin: 0;
-  border-right: 2px solid #E91E63;
+  border: 0 solid #E91E63;
+  border-width: 0 2px 0 0;
   padding: 1em;
   overflow: auto;
   cursor: default;
 }
 #sectionLeft p {
-  max-width: 270px;
+  /* max-width: 270px; */
   float: right;
   padding: 0.5em 0;
   margin-top: 0;
@@ -146,9 +150,58 @@ nav .active {
 #container > p {
   line-height: 1.4;
 }
+
+/* mobile/small screen layout, starting point for print */
+@media screen and (max-width: 720px), print {
+  #sectionLeft {
+    position: static;
+    width: 100%;
+    text-align: center;
+    background: rgba(0,0,0,0.05);
+    margin: 0;
+    border-width: 0 0 2px 0;
+    padding: 1em;
+    overflow: auto;
+    cursor: default;
+  }
+  nav :not(.sub) > a {
+    display: inline-block;
+  }
+  nav .active {
+    display: block;
+    width: 100%;
+  }
+  #container {
+    padding: 0 1em 2em 1em;
+    font-size: 0.85em;
+  }
+  #sectionLeft p {
+    max-width: none;
+  }
+}
+@media print {
+  /* hide navigation, "back" link, source links */
+  nav, .return, #container sup a {
+    display: none;
+  }
+  #container sup {
+    /* don't change line height for real <sup>s */
+    vertical-align: text-top;
+    font-size: 0.5em;
+  }
+  #sectionLeft {
+    text-align: left;
+  }
+  #container {
+    font-size: 1em;
+  }
+}
+
+/* tables and schedules */
 table {
   border-collapse: collapse;
   min-width: 100%;
+  overflow: auto;
   border: 1px solid black;
 }
 td, th {
@@ -177,13 +230,15 @@ td, th {
   color:  #444;
   font-style: italic;
 }
-.schedule .-ap {
+.schedule .-ap div {
   background-color: #BBDEFB;
   font-weight: 700;
   border-radius: 3px;
   border: 1px solid #1E88E5;
+  line-height: 1.6;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.5);
 }
-.schedule.-includes-double-block .-ap {
+.schedule .-ap.-is-double-blocked div {
   background-color: #F8BBD0;
   border: 1px solid #E91E63;
 }
