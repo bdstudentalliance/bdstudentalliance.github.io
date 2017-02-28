@@ -104,6 +104,12 @@ a[id] ~ p, h3 ~ p {
   margin-top: 0;
   border-top: 1px dotted rgba(0,0,0,0.25);
 }
+blockquote {
+  background: #ddd;
+  margin: 1em 0;
+  padding: 1em;
+  line-height: 1.4;
+}
 nav {
   text-transform: uppercase;
   font-weight: 400;
@@ -203,6 +209,7 @@ table {
   min-width: 100%;
   overflow: auto;
   border: 1px solid black;
+  margin-top: 0.5em;
 }
 td, th {
   padding: 4px;
@@ -237,6 +244,9 @@ td, th {
   border: 1px solid #1E88E5;
   line-height: 1.6;
   box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+}
+.schedule .-ap div ~ div {
+  margin-top: 4px;
 }
 .schedule .-ap.-is-double-blocked div {
   background-color: #F8BBD0;
